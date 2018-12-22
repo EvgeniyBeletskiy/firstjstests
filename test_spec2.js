@@ -1,4 +1,14 @@
 describe ('BBC tests', function() {
+
+    beforeEach(function() {
+        originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 100000;
+    });
+
+    afterEach(function() {
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+      });
+
     it ("input something in search area", function () {
         browser.waitForAngularEnabled(false);
         browser.get("http://www.bbc.com/");

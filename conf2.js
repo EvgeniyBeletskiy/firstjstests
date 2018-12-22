@@ -9,7 +9,7 @@ exports.config = {
   multiCapabilities: [{
     'browserName': 'chrome',
     'chromeOptions': {
-      args: ['-start-maximized'] // THIS!
+      args: ['-start-maximized'] 
   }
   }, {
     'browserName': 'firefox'
